@@ -1,0 +1,10 @@
+<h1>Give me pastes</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'new_paste' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="email" id="email" />
+  <input type="text" name="code" id="code" />
+  <input type="submit" value="Paste" />
+</form>

@@ -1,0 +1,8 @@
+<ul>
+<li>{{ paste.email }}</li>
+<li>Added: {{ paste.added }}</li>
+<li>Group: <a href="{% url 'group' paste.group.id  %}">{{ paste.group.name }}</a></li>
+</ul>
+<pre>
+{{ paste.code }}
+</pre>
